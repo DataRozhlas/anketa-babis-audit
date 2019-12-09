@@ -19,8 +19,7 @@ function onLoad(e) {
             <div className="vek">{el.f}</div>
             <div className="vek">{el.s.length > 0 ? "(" + el.s + ")" : ""}</div>
           </div>
-          <div className="odpoved"><strong>1.</strong> {el.o1.length > 0 | el.o2.length > 0 ? el.o1 : "bez odpovědi"}</div>
-          <div className="odpoved"><strong>2.</strong> {el.o2.length > 0 ? el.o2 : "bez odpovědi"}</div>
+          <div className="odpoved" dangerouslySetInnerHTML={{ __html: el.o }}></div>
         </div>
       ))}
     </div>
